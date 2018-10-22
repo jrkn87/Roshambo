@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="290.0" maxWidth="400.0" minHeight="290.0" minWidth="400.0" prefHeight="290.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="simplegame.AppController">
+   <children>
+      <TitledPane animated="false" layoutX="14.0" layoutY="14.0" prefHeight="121.0" prefWidth="178.0" text="Player">
+         <content>
+            <Group id="group">
+               <children>
+                  <RadioButton fx:id="scissors" layoutX="-66.0" layoutY="8.0" mnemonicParsing="false" onAction="#show" prefWidth="88.0" text="Scissors">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="stone" layoutX="-66.0" layoutY="-17.0" mnemonicParsing="false" onAction="#show" prefHeight="18.0" prefWidth="168.0" text="Stone" toggleGroup="$group" />
+                  <RadioButton fx:id="paper" layoutX="-66.0" layoutY="-42.0" mnemonicParsing="false" onAction="#show" selected="true" text="Paper" toggleGroup="$group" />
+                  <ImageView fx:id="imgPlayer" fitHeight="82.0" fitWidth="69.0" layoutX="33.0" layoutY="-49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/New%20Project(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="203.0" layoutY="14.0" prefHeight="121.0" prefWidth="178.0" text="Computer">
+         <content>
+            <ImageView fx:id="imgComputer" fitHeight="89.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true" />
+         </content>
+      </TitledPane>
+      <Button fx:id="btn" layoutX="14.0" layoutY="145.0" mnemonicParsing="false" onAction="#click" prefHeight="130.0" prefWidth="178.0" text="Try">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Label layoutX="224.0" layoutY="156.0" text="Wins: " />
+      <Label layoutX="224.0" layoutY="195.0" text="Loses:" />
+      <Label layoutX="224.0" layoutY="233.0" text="Remis:" />
+      <Label fx:id="winL" layoutX="292.0" layoutY="156.0" text="0" />
+      <Label fx:id="loseL" layoutX="292.0" layoutY="193.0" text="0" />
+      <Label fx:id="remisL" layoutX="292.0" layoutY="233.0" text="0" />
+      <Label layoutX="249.0" layoutY="261.0" text="Score:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="scoreL" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="298.0" layoutY="259.0" prefHeight="21.0" prefWidth="97.0" text="0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
